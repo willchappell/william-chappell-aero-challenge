@@ -126,18 +126,25 @@ h2 {
     margin-bottom: 1rem;
 }
 
-section.accordion-item {
-    cursor: pointer;
-}
-
 section.accordion-item:last-of-type {
     border-bottom: none;
 }
 
-.accordion-title {
+.accordion-trigger {
+    appearance: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.accordion-title button {
     font-size: 24px;
     line-height: 28px;
     color: #191919;
+    text-align: left;
 }
 
 .accordion-icon {
