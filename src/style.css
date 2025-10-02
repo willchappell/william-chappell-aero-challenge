@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Globals */
+body {
+    background-color: #F8F6F3;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 4%;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1480px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1080px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+@media (max-width: 568px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+main {
+    border: 1px solid #191919;
+    margin: 2rem 0;
+}
+
+main.loading {
+    opacity: 0;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout > div {
+    width: 50%;
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .layout > div {
+        width: 100%;
+    }
+}
+
+section {
+    padding: 2rem;
+    border-bottom: 1px solid #191919;
+    position: relative;
+}
+
+@media (max-width: 568px) {
+    section {
+        padding: 1.5rem;
+    }
+}
+
+/* Styles */
+.image-container img {
+    border-right: 1px solid #191919;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 1280px) {
+    .layout > div.image-container {
+        display: none;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 48px;
+    max-width: 340px;
+}
+
+@media (max-width: 568px) {
+    h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+.overline-title {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+section.accordion-item {
+    cursor: pointer;
+}
+
+section.accordion-item:last-of-type {
+    border-bottom: none;
+}
+
+.accordion-title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #191919;
+}
+
+.accordion-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.accordion-icon .vertical-line {
+    transition: .5s all;
+}
+
+.accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+@media (max-width: 1280px) {
+    .accordion-content {
+        transition: none;
+    }
+}
+
+.accordion-content p {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.accordion-content img {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 1281px) {
+    .accordion-content img {
+        display: none;
+    }
+}
+
+/* Active state */
+section.accordion-item.active .accordion-content {
+    height: 2rem;
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 1280px) {
+    section.accordion-item.active .accordion-content {
+        height: auto;
+    }
+}
+
+section.accordion-item.active .accordion-icon .vertical-line {
+    stroke: none;
+}
